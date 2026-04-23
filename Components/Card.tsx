@@ -3,8 +3,16 @@ import React from 'react'
 import { globalStyles } from '../Styles/AppStyle'
 import { Tdata } from '../data/data'
 import { Colors } from '../Styles/Colors'
+import { useNavigation } from '@react-navigation/native';
 
-const Card = ({item, handlePress} : {item : Tdata, handlePress : ()=>void}) => {
+const Card = ({item} : {item : Tdata}) => {
+
+  const navigation = useNavigation()
+
+  const handlePress = ()=>{
+    (navigation as any).navigate("Portofolio",item)
+  }
+
   return (
     <Pressable
         onPress={()=>handlePress()}

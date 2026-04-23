@@ -10,12 +10,8 @@ const Home = ({navigation}: {navigation : any}) => {
     const data = DATA
 
     const renderProfile = ({item} : {item : Tdata})=>{
-        const navTo = ()=>{
-            navigation.navigate("Portofolio",item)
-        }
-        return (
-            <Card item={item} handlePress={navTo} />
-        )
+
+        return <Card item={item} />
     }
 
     return (
