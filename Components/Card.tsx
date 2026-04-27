@@ -24,7 +24,7 @@ const Card = ({item} : {item : Tdata}) => {
         <Image style={globalStyles.profileImg} source={{ uri : item.img}} />
         <View style={globalStyles.profileInfo}>
             <Text style={globalStyles.profileCountry}>{item.country}</Text>
-            <Text>{item.totalImg}</Text>
+            <Text>{item.photos.length}</Text>
         </View>
     </Pressable>
   )

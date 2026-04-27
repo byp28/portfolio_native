@@ -1,37 +1,22 @@
-import { View, Text, Button, StyleSheet } from 'react-native'
+import { View, Text, Button, ScrollView, Image } from 'react-native'
 import React from 'react'
+import { globalStyles } from '../Styles/AppStyle'
 
-const Photo = ({navigation}: {navigation : any}) => {
+const Photo = ({navigation, route}: {navigation : any, route : any}) => {
 
-  const handlePress = ()=>{
-    navigation.popToTop()
-  }
+  const {name, img, title, url, photoDesc , favColor} = route.params
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Photo</Text>
-      <Button 
-      title='go to Home' 
-      onPress={()=> handlePress()}/>
-    </View>
+    <ScrollView>
+      <Image source={{uri : url }} style={globalStyles.ImgSelect} />
+      <View style={{gap : 12, paddingHorizontal : 25, paddingVertical : 8}}>
+        <Text style={{fontSize : 20}}>Lien</Text>
+        <Text style={{textAlign : "justify", fontSize : 16}}>{photoDesc}</Text>
+      </View>
+    </ScrollView>
   )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignContent : "center",
-    justifyContent : "center",
-    padding : 20,
-    gap : 8,
-    backgroundColor : "#fbfd84"
 
-  },
-  text : {
-    fontSize : 22,
-    textAlign : "center",
-    fontWeight : "500"
-  }
-});
 
 export default Photo

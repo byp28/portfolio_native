@@ -26,6 +26,20 @@ export const globalStyles = StyleSheet.create({
     height : 350,
     borderRadius : 14
   },
+  headerL : {
+    flexDirection  : "row",
+    marginHorizontal : 2,
+  },
+  hTexte : {
+    fontSize : 25,
+    color : "white",
+  },
+  pImg : {
+    width : 40,
+    height : 40,
+    borderRadius : 50,
+    marginHorizontal : 10,
+  },
   profileInfo : {
     width: "100%",
     flexDirection : "row",
@@ -38,5 +52,28 @@ export const globalStyles = StyleSheet.create({
     paddingHorizontal : 8,
     backgroundColor : "#d8d8d8",
     borderRadius : 5
-  }
+  },
+  TouchableContainer : {
+    width : "100%",
+    height : 350,
+    marginBottom : 15
+  },
+  TouchablePhoto : {
+    width : "100%",
+    height : "100%",
+    justifyContent : "flex-end",
+  },
+  TouchableView : {
+    backgroundColor : "#000000a0",
+    padding :18,
+  },
+  TouchableText : {
+    fontSize : 18,
+    color : "#fff"
+  },
+  ImgSelect : {
+    width : "100%",
+    height : 350,
+    marginBottom : 14
+  },
 });
